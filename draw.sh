@@ -6,3 +6,9 @@ secondsAfter=$[$(date +%s --date="$1") - $(date +%s --date="Dec 29, 2019 00:00 $
 ((row=index % 7))
 ((column=index / 7))
 echo $row,$column
+
+if [ $[$column % 12 / 6] -eq $[$row / 4] ]; then
+	echo positive
+else
+	echo negative
+fi
