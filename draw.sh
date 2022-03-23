@@ -8,7 +8,6 @@ secondsAfter=$[$(date +%s --date="$1") - $(date +%s --date="Dec 29, 2019 00:00 $
 ((row=index % 7))
 ((column=index / 7))
 
-
 # determine index of pattern list; determines slope by region:
 # +----+----+     +---+---+ 
 # | 1  | -1 |     | / | \ | 

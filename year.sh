@@ -20,8 +20,13 @@ echo "This is basically irreversable....."
 read answer
 [ "$answer" != "YES" ] && exit
 
-# runs draw.sh for each start date, shifting by i days each time
-for i in {0..365}
+# runs draw.sh for each start date over 365 days, shifting by i days each time
+for i in {0..364}
 do
 	bash draw.sh "@$[$startDate+$i*24*3600]"
 done
+
+# if leap year, do final day
+if [ $[$(date +%y --date="@$startDate") % 4] -eq 0 ]; then
+	bash draw.sh "@$[$startDate+365*24*3600]"
+fi
