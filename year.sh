@@ -1,4 +1,5 @@
 #!/bin/bash
+cd $(dirname "$0")
 echo Enter year to populate:
 read year
 startDate=$(date +%s --date="Jan 1 $year")
@@ -14,5 +15,5 @@ read answer
 
 for i in {0..365}
 do
-	./draw.sh "@$[$startDate+$i*24*3600]"
+	bash draw.sh "@$[$startDate+$i*24*3600]"
 done
