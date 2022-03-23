@@ -1,6 +1,6 @@
 # Github Commit Art Generator
 
-This utility generates commit art on the contrubution graphic on the user's Github homepage. It does so by committing a specified amount of times for a given day.
+This utility generates commit art on the contribution graphic on the user's Github homepage. It does so by committing a specified amount of times for a given day.
 
 ## Usage
 
